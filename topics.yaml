@@ -1,0 +1,24 @@
+apiVersion: "kafka.jikkou.io/v1beta2"
+kind: "KafkaTopic"
+metadata:
+  name: "orders"
+  labels:
+    kafka.jikkou.io/topic-id: "peHo0SlTQTuYx3xUmIJMog"
+  annotations:
+    kafka.jikkou.io/cluster-id: "CBqxe2YtSECxx4aLpVgXnA"
+    jikkou.io/generated: "2023-12-29T12:20:40.776048Z"
+spec:
+  partitions: 2
+  replicas: 1
+  configs: {}
+  configMapRefs: []
+---
+apiVersion: "kafka.jikkou.io/v1beta2"
+kind: "KafkaTopic"
+metadata:
+  name: "quotes"
+spec:
+  partitions: 2
+  replicas: 1
+  configs: 
+    retention.ms: 180000
